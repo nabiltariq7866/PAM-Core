@@ -177,6 +177,7 @@ export const NAV_ITEMS_ADMIN: NavItem[] = [
 export const NAV_ITEMS_LENDER: NavItem[] = [
   { id: "dashboard", label: "Lender Dashboard", icon: "dashboard", group: "Operations", slug: "dashboard" },
   { id: "orders", label: "Orders & Intake", icon: "orders", group: "Operations", slug: "orders" },
+  { id: "savings", label: "Borrower Savings", icon: "savings", group: "Operations", slug: "savings" },
   { id: "panel", label: "Panel Management", icon: "users", group: "Operations", slug: "panel" },
   { id: "compliance", label: "Compliance & Audit", icon: "compliance", group: "Governance", slug: "compliance" },
 ];

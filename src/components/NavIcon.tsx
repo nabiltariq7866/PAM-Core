@@ -6,6 +6,7 @@ import {
   Workflow,
   Sparkles,
   Building2,
+  DollarSign,
 } from "lucide-react";
 
 export type IconName =
@@ -16,7 +17,8 @@ export type IconName =
   | "compliance"
   | "workspace"
   | "copilot"
-  | "brand";
+  | "brand"
+  | "savings";
 
 export function NavIcon({ name, size = 18 }: { name: IconName; size?: number }) {
   const iconProps = { size, strokeWidth: 2 };
@@ -37,6 +39,8 @@ export function NavIcon({ name, size = 18 }: { name: IconName; size?: number }) 
       return <Sparkles {...iconProps} />;
     case "brand":
       return <Building2 {...iconProps} />;
+    case "savings":
+      return <DollarSign {...iconProps} />;
     default:
       return <LayoutDashboard {...iconProps} />;
   }
