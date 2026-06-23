@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+[data-theme="light"] {
+  --bg: #fbfcfc;
+  --bg-alt: #f5f7f8;
+  --card: #ffffff;
+  --border: #e0e5e9;
+  --text: #033840;
+  --muted: #2f5f66;
+  --highlight: #e8f5f0;
+  --ai-bg: #f0faf6;
+  --accent: #1bd488;
+  --primary: #033840;
+  --primary-mid: #2f5f66;
+  --teal-light: #9ab5b1;
+  --btn-primary-text: #033840;
+  --text-on-primary: #fbfcfc;
+  --gradient-brand: linear-gradient(135deg, #055b65, #1bd488);
+  --gradient-hero: linear-gradient(135deg, #055b65 0%, #45828b 100%);
+  --gradient-toast: linear-gradient(135deg, #055b65, #45828b);
+  --shadow-panel: 0 20px 60px rgba(5, 91, 101, 0.2);
+  --shadow-sm: 0 1px 3px rgba(5, 91, 101, 0.08);
+  --presenter-done: #e6fbf2;
+  --toggle-bg: #e0e5e9;
+  --toggle-knob: #fbfcfc;
+  --nav-active-bg: #055b65;
+  --nav-active-icon: #fbfcfc;
+  --filter-active-bg: #055b65;
+  --filter-active-text: #fbfcfc;
+  --success-banner-bg: #e6fbf2;
+  --success-banner-text: #033840;
+  --valuation-accent-bg: linear-gradient(180deg, #e6fbf2 0%, var(--card) 100%);
+  --red-500: #ef4444;
+  --amber-500: #f59e0b;
+  --hero-text: #fbfcfc;
+  --hero-text-muted: #b2c9c5;
+}
+
+[data-theme="dark"] {
+  --bg: #0a1214;
+  --bg-alt: #0e1819;
+  --card: #121f22;
+  --border: #2a3f42;
+  --text: #e8f4f2;
+  --muted: #7ba8a8;
+  --highlight: #1a2f32;
+  --ai-bg: #152628;
+  --accent: #1bd488;
+  --primary: #b2c9c5;
+  --primary-mid: #6a9a9a;
+  --teal-light: #2a4a4e;
+  --btn-primary-text: #055b65;
+  --text-on-primary: #0a1214;
+  --gradient-brand: linear-gradient(135deg, #033840, #1bd488);
+  --gradient-hero: linear-gradient(135deg, #022a30 0%, #055b65 50%, #1a454c 100%);
+  --gradient-toast: linear-gradient(135deg, #055b65, #2a5f66);
+  --shadow-panel: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --presenter-done: rgba(27, 212, 136, 0.14);
+  --toggle-bg: #2a3f42;
+  --toggle-knob: #b2c9c5;
+  --nav-active-bg: #1bd488;
+  --nav-active-icon: #055b65;
+  --filter-active-bg: #1bd488;
+  --filter-active-text: #055b65;
+  --success-banner-bg: rgba(27, 212, 136, 0.12);
+  --success-banner-text: #1bd488;
+  --valuation-accent-bg: linear-gradient(180deg, rgba(27, 212, 136, 0.12) 0%, var(--card) 100%);
+  --red-500: #f87171;
+  --amber-500: #fbbf24;
+  --hero-text: #ffffff;
+  --hero-text-muted: rgba(255, 255, 255, 0.82);
+}
+
+html {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+input,
+button,
+select {
+  font-family: inherit;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.theme-toggle {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  background: var(--toggle-bg);
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--toggle-knob);
+  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .theme-toggle::after {
+  transform: translateX(24px);
+}
+
+.theme-toggle-label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.login-theme-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  background: var(--gradient-brand);
+  color: var(--text-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner {
+  background: var(--gradient-hero);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+}
+
+.hero-banner-title {
+  color: var(--hero-text);
+}
+
+.hero-banner-muted {
+  color: var(--hero-text-muted);
+}
+
+.hero-banner-accent {
+  color: var(--accent);
+}
+
+.hero-banner-btn-ghost {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: var(--hero-text);
+  border-radius: 10px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+[data-theme="dark"] .hero-banner-btn-ghost {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+}
+
+.presenter-dock {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 1000;
+}
+
+.presenter-panel {
+  position: absolute;
+  bottom: 64px;
+  right: 0;
+  width: 340px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-panel);
+  overflow: hidden;
+}
+
+.presenter-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gradient-toast);
+  border: none;
+  border-radius: 28px;
+  padding: 11px 18px;
+  box-shadow: 0 8px 24px rgba(5, 91, 101, 0.35);
+  cursor: pointer;
+  color: var(--text-on-primary);
+  font-family: inherit;
+}
+
+.presenter-scenario-done {
+  background: var(--presenter-done) !important;
+}
+
+.toast-geo {
+  background: var(--gradient-toast);
+  color: var(--text-on-primary);
+}
+
+.ai-avatar {
+  background: var(--gradient-brand);
+  color: var(--text-on-primary);
+}
