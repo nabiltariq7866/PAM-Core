@@ -13,7 +13,7 @@ export default function HomePage() {
 
   useEffect(() => {
     if (!isLoading && user) {
-      router.replace(`/${user.role}/dashboard`);
+      router.replace(user.redirectTo);
     }
   }, [router, user, isLoading]);
 

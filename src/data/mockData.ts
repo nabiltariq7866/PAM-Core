@@ -137,7 +137,7 @@ export const DEMO_USERS: SessionUser[] = [
     role: "admin",
     avatar: "PE",
     email: "executive@pamvalue.com",
-    redirectTo: "/admin",
+    redirectTo: "/admin/overview",
   },
   {
     id: "lender",
@@ -145,7 +145,7 @@ export const DEMO_USERS: SessionUser[] = [
     role: "lender",
     avatar: "LD",
     email: "appraisal@lenderbank.com",
-    redirectTo: "/lender",
+    redirectTo: "/lender/dashboard",
   },
   {
     id: "appraiser",
@@ -153,7 +153,7 @@ export const DEMO_USERS: SessionUser[] = [
     role: "appraiser",
     avatar: "CA",
     email: "appraiser@pamvalue.com",
-    redirectTo: "/appraiser",
+    redirectTo: "/appraiser/workspace",
   },
   {
     id: "compliance",
@@ -161,7 +161,7 @@ export const DEMO_USERS: SessionUser[] = [
     role: "compliance",
     avatar: "CO",
     email: "compliance@pamvalue.com",
-    redirectTo: "/compliance",
+    redirectTo: "/compliance/audit",
   },
 ];
 
